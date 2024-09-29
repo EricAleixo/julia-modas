@@ -18,9 +18,14 @@ export const Produtos = () => {
 
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     <div>
-                        <Link to={{
-                            
-                        }}>
+                        <Link to="/produto"
+                            state={{
+                                imagem: imagemValter,
+                                preco: 19.99,
+                                nome: "Traje elegante",
+                                fornecedor: "Pela Valterlândia"
+                            }
+                            }>
                             <a href="#" className="group relative block h-96 overflow-hidden rounded-t-lg bg-gray-100">
                                 <img src={imagemValter} loading="lazy" alt="Foto de Valter" className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                                 <span className="absolute left-0 top-3 rounded-r-lg bg-red-500 px-3 py-1.5 text-sm font-semibold uppercase tracking-wider text-white">-50%</span>
