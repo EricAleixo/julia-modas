@@ -23,7 +23,7 @@ export const Produtos = () => {
                     nome="Traje elegante" 
                     preco={19.45} 
                     fornecedor="Pela Valterlândia"
-                    desconto={80}>
+                    desconto={30}>
                     </Card>
 
                     <Card
