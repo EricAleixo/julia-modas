@@ -5,7 +5,7 @@ import { Cabecalho } from "../../shared/Cabecalho/Cabecalho"
 export const CardProduto = () => {
 
     const location = useLocation()
-    const { imagem, preco, nome, fornecedor } = location.state || {}
+    const { imagem, preco, nome, fornecedor, desconto } = location.state || {}
 
     const desativarLink = (e:React.MouseEvent<HTMLAnchorElement>) =>{
         e.preventDefault()
@@ -64,7 +64,7 @@ export const CardProduto = () => {
                             <div className="mb-4">
                                 <div className="flex items-end gap-2">
                                     <span className="text-xl font-bold text-gray-800 md:text-2xl">${preco}</span>
-                                    <span className="mb-0.5 text-red-500 line-through">$30.00</span>
+                                    <span className="mb-0.5 text-red-500 line-through">${desconto}</span>
                                 </div>
                                 <span className="text-sm text-gray-500">Incluindo desconto em retirada</span>
                             </div>
