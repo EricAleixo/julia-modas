@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom"
 
-interface CardProps{
+interface CardProps {
     imagem: string,
     nome: string,
     preco: number,
     fornecedor: string,
-    desconto: number
+    desconto?: number
 }
 
-export const Card:React.FC<CardProps> = ({imagem, preco, nome, fornecedor, desconto}) => {
+export const Card: React.FC<CardProps> = ({ imagem, preco, nome, fornecedor, desconto = 0 }) => {
 
-    const calcularDesconto = (preco:number) => {
+    const calcularDesconto = (preco: number) => {
         const precoDescontado = preco - preco * (desconto / 100)
         return precoDescontado.toFixed(2)
     }
@@ -28,7 +28,8 @@ export const Card:React.FC<CardProps> = ({imagem, preco, nome, fornecedor, desco
                 }>
                 <a href="#" className="group relative block h-96 overflow-hidden rounded-t-lg bg-gray-100">
                     <img src={imagem} loading="lazy" alt="Foto de Valter" className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-                    {desconto > 0 && <span className="absolute left-0 top-3 rounded-r-lg bg-red-500 px-3 py-1.5 text-sm font-semibold uppercase tracking-wider text-white">-{desconto}%</span>}
+                    {desconto > 0 &&
+                        <span className="absolute left-0 top-3 rounded-r-lg bg-red-500 px-3 py-1.5 text-sm font-semibold uppercase tracking-wider text-white">-{desconto}%</span>}
                 </a>
             </Link>
 
@@ -39,8 +40,11 @@ export const Card:React.FC<CardProps> = ({imagem, preco, nome, fornecedor, desco
                 </div>
 
                 <div className="flex flex-col items-end">
-                    <span className="font-bold text-gray-600 lg:text-lg">R${preco}</span>
-                    {desconto > 0 && <span className="text-sm text-red-500 line-through">R${calcularDesconto(preco)}</span>}
+                    {desconto > 0 &&
+                        <span className="font-bold text-gray-600 lg:text-lg">R${calcularDesconto(preco)}</span>}
+                    {desconto > 0 ?
+                        <span className="text-sm text-red-500 line-through">R${preco}</span>
+                        : <span className="font-bold text-gray-600 lg:text-lg">R${preco}</span>}
                 </div>
             </div>
         </div>

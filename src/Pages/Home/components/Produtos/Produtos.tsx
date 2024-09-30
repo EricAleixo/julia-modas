@@ -23,39 +23,35 @@ export const Produtos = () => {
                     nome="Traje elegante" 
                     preco={19.45} 
                     fornecedor="Pela Valterlândia"
-                    desconto={50}>
+                    desconto={80}>
                     </Card>
 
                     <Card
                     imagem={imagemAnael}
                     nome = "Visual Bonito"
                     preco={37.99}
-                    fornecedor="Por Vasco da Gama"
-                    desconto={0}>
+                    fornecedor="Por Vasco da Gama">
                     </Card>
 
                     <Card
                     imagem={imagemIttalo}
                     nome = "Elegante casual"
                     preco={53.99}
-                    fornecedor="Por Voinha"
-                    desconto={10}>
+                    fornecedor="Por Voinha">
                     </Card>
 
                     <Card
                     imagem={imagemRyertson}
                     nome = "Traje Luxuoso"
                     preco={79.99}
-                    fornecedor="Por combate a bombas"
-                    desconto={20}>
+                    fornecedor="Por combate a bombas">
                     </Card>
 
                     <Card
                     imagem={imagemAyrton}
                     nome = "kit pai e filho"
                     preco={29.99}
-                    fornecedor="Por Ramon Menezes"
-                    desconto={0}>
+                    fornecedor="Por Ramon Menezes">
                     </Card>
                     
                 </div>
