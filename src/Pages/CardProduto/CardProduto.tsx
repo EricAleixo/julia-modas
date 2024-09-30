@@ -7,9 +7,14 @@ export const CardProduto = () => {
     const location = useLocation()
     const { imagem, preco, nome, fornecedor, desconto } = location.state || {}
 
-    const desativarLink = (e:React.MouseEvent<HTMLAnchorElement>) =>{
+    const desativarLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault()
-    } 
+    }
+
+    const calcularDesconto = (preco: number) => {
+        const precoDescontado = preco - preco * (desconto / 100)
+        return precoDescontado.toFixed(2)
+    }
 
     return (
         <div>
@@ -20,7 +25,8 @@ export const CardProduto = () => {
                         <div className="grid gap-4 lg:grid-cols-4">
                             <div className="relative overflow-hidden rounded-lg bg-gray-100 lg:col-span-4">
                                 <img src={imagem} loading="lazy" alt={`Foto de ${nome}`} className="h-full w-full object-cover object-center" />
-                                <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">Promoção</span>
+                                {desconto > 0 &&
+                                    <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">Promoção</span>}
                                 <a href="#" className="absolute right-4 top-4 inline-block rounded-lg border bg-white px-3.5 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:text-gray-700 md:text-base">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -63,8 +69,9 @@ export const CardProduto = () => {
                             </div>
                             <div className="mb-4">
                                 <div className="flex items-end gap-2">
-                                    <span className="text-xl font-bold text-gray-800 md:text-2xl">${preco}</span>
-                                    <span className="mb-0.5 text-red-500 line-through">${desconto}</span>
+                                    <span className="text-xl font-bold text-gray-800 md:text-2xl">${calcularDesconto(preco)}</span>
+                                    {desconto > 0 &&
+                                        <span className="mb-0.5 text-red-500 line-through">${preco}</span>}
                                 </div>
                                 <span className="text-sm text-gray-500">Incluindo desconto em retirada</span>
                             </div>

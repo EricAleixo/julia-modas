@@ -23,7 +23,7 @@ export const Card: React.FC<CardProps> = ({ imagem, preco, nome, fornecedor, des
                     preco: preco,
                     nome: nome,
                     fornecedor: fornecedor,
-                    desconto: calcularDesconto(desconto)
+                    desconto: desconto
                 }
                 }>
                 <a href="#" className="group relative block h-96 overflow-hidden rounded-t-lg bg-gray-100">
