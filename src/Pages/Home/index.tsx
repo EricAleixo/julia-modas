@@ -2,8 +2,9 @@ import { Cabecalho } from "../../shared/Cabecalho/"
 import { Apresentacao } from "./components/Apresentacao/"
 import { Precos } from "./components/Precos/"
 import { Produtos } from "./components/Produtos/"
-import { Anuncios } from "./components/Anuncios/index.tsx"
+import { Anuncios } from "./components/Anuncios/"
 import { Email } from "./components/Email/"
+import { Membros } from "./components/Membros/"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Produtos></Produtos>
       <Anuncios></Anuncios>
       <Email></Email>
+      <Membros></Membros>
     </div>
 
   )
