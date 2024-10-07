@@ -13,8 +13,8 @@ export const CardTipo:React.FC<CardTipoProps> = ({ imagem , genero , tipo , desc
             </a>
 
             <div className="flex flex-col">
-                <span className="text-gray-500">{genero}</span>
-                <a href="#" className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">{tipo}</a>
+                <span className="text-gray-500 capitalize">{genero}</span>
+                <a href="#" className="capitalize text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">{tipo}</a>
             </div>
         </div>
     )
