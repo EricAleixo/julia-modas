@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 
-import { Cabecalho } from "../../shared/Cabecalho/Cabecalho"
+import { Cabecalho } from "../../shared/Cabecalho"
 
 import { calcularDesconto } from "../../shared/Funcoes/calcularDesconto"
 

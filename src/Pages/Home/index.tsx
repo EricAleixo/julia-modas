@@ -1,9 +1,9 @@
-import { Cabecalho } from "../../shared/Cabecalho/Cabecalho.tsx"
-import { Apresentacao } from "./components/Apresentacao/Apresentacao.tsx"
-import { Precos } from "./components/Precos/Precos.tsx"
-import { Produtos } from "./components/Produtos/Produtos.tsx"
-import { Anuncios } from "./components/Anuncios/Anuncio.tsx"
-import { Email } from "./components/Email/Email.tsx"
+import { Cabecalho } from "../../shared/Cabecalho/"
+import { Apresentacao } from "./components/Apresentacao/"
+import { Precos } from "./components/Precos/"
+import { Produtos } from "./components/Produtos/"
+import { Anuncios } from "./components/Anuncios/index.tsx"
+import { Email } from "./components/Email/"
 
 
 function App() {
