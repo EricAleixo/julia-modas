@@ -74,7 +74,7 @@ export const Time = () => {
                     <FotoPerfil
                     urlImagem={thaysllaFoto}
                     descricaoImagem="Foto de Thayslla"
-                    nome="Thayslla"
+                    nome="Thayslla Karla"
                     cargo="Designer de UX/UI"
                     >
                     </FotoPerfil>
