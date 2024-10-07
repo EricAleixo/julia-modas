@@ -1,5 +1,8 @@
+import { CardTipo } from "./componentes/CardTipo"
+
 import imagemIttalo from "./assets/ittalo.JPG"
 import imagemAyrton from "./assets/ayrton.JPG"
+import imagemAdriana from "./assets/adriana.jpg"
 
 export const Precos = () =>{
     return(
@@ -13,49 +16,35 @@ export const Precos = () =>{
 
           <div className="grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4">
 
-            <div>
-              <a href="#" className="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3">
-                <img src={imagemIttalo} alt="Photo by Austin Wade" className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-              </a>
+            <CardTipo
+            imagem = {imagemIttalo}
+            genero = "Masculino"
+            tipo="negócios casuais"
+            descricao="Foto de roupas para negócios casuais">
+            </CardTipo>
 
-              <div className="flex flex-col">
-                <span className="text-gray-500">Masculino</span>
-                <a href="#" className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">Negócios casuais</a>
-              </div>
-            </div>
+            <CardTipo
+            imagem = {imagemAdriana}
+            genero = "Feminino"
+            tipo="festas sociais"
+            descricao="Foto de roupas para Festas sociais">
+            </CardTipo>
 
-            <div>
-              <a href="#" className="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3">
-                <img src="https://images.unsplash.com/photo-1603344797033-f0f4f587ab60?auto=format&q=75&fit=crop&crop=top&w=600&h=700" loading="lazy" alt="Photo by engin akyurt" className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-              </a>
+            <CardTipo
+            imagem = {imagemAyrton}
+            genero = "Masculino"
+            tipo="moda de rua"
+            descricao="Foto de roupas para uso urbano">
+            </CardTipo>
 
-              <div className="flex flex-col">
-                <span className="text-gray-500">Feminino</span>
-                <a href="#" className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">Sessão verão</a>
-              </div>
-            </div>
+            <CardTipo
+            imagem = {imagemIttalo}
+            genero = "Masculino"
+            tipo="negócios casuais"
+            descricao="Foto de roupas para negócios casuais">
+            </CardTipo>
 
-            <div>
-              <a href="#" className="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3">
-                <img src={imagemAyrton} alt="Photo by Austin Wade" className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-              </a>
-
-              <div className="flex flex-col">
-                <span className="text-gray-500">Masculino</span>
-                <a href="#" className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">Moda de rua</a>
-              </div>
-            </div>
-
-            <div>
-              <a href="#" className="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3">
-                <img src="https://images.unsplash.com/photo-1560269999-cef6ebd23ad3?auto=format&q=75&fit=crop&w=600&h=700" loading="lazy" alt="Photo by Austin Wade" className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-              </a>
-
-              <div className="flex flex-col">
-                <span className="text-gray-500">Feminino</span>
-                <a href="#" className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">Promoção</a>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
