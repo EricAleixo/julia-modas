@@ -28,6 +28,7 @@ export const Time = () => {
                     descricaoImagem="Foto de Júlia"
                     nome="Maria Júlia"
                     cargo="Fundadora / CEO"
+                    linkInstagram="https://www.instagram.com/majuu.fernandess?igsh=MWpjbnZ5NGJwbGN6dQ=="
                     >
                     </FotoPerfil>
                     
@@ -36,6 +37,7 @@ export const Time = () => {
                     descricaoImagem="Foto de Gustavo"
                     nome="Gustavo Daniel"
                     cargo="COO /CFO"
+                    linkInstagram="https://www.instagram.com/eudsantossilva?igsh=cGN0Y25nemV1bXBq"
                     >
                     </FotoPerfil>
                     
@@ -44,6 +46,7 @@ export const Time = () => {
                     descricaoImagem="Foto de Eric"
                     nome="Eric Aleixo"
                     cargo="CTO / Desenvolvedor Full-Stack"
+                    linkInstagram="https://www.instagram.com/eric.alxy/profilecard/?igsh=aXo2dnB0dGZ4Nzcw"
                     >
                     </FotoPerfil>
                     
@@ -52,6 +55,7 @@ export const Time = () => {
                     descricaoImagem="Foto de Emmaely"
                     nome="Emmaely Gomes"
                     cargo="CD / Estilista Chefe"
+                    linkInstagram="https://www.instagram.com/_maely_gomes_?igsh=YTc2eTlubXhwdjI3"
                     >
                     </FotoPerfil>
                     
@@ -60,6 +64,7 @@ export const Time = () => {
                     descricaoImagem="Foto de Yuri"
                     nome="Yuri Martins"
                     cargo="Gerente de Marketing"
+                    linkInstagram="https://www.instagram.com/yuri_martin._?igsh=YW1yMmV0YWRnZmdq"
                     >
                     </FotoPerfil>
                     
@@ -68,6 +73,7 @@ export const Time = () => {
                     descricaoImagem="Foto de Ryan"
                     nome="Ryan Gustavo"
                     cargo="Analista de E-commerce"
+                    linkInstagram="https://www.instagram.com/ryann.xy2?igsh=c3d5bm13MzJxeWU="
                     >
                     </FotoPerfil>
 
@@ -76,6 +82,7 @@ export const Time = () => {
                     descricaoImagem="Foto de Thayslla"
                     nome="Thayslla Karla"
                     cargo="Designer de UX/UI"
+                    linkInstagram="https://www.instagram.com/thaysllasotnas?igsh=MTg4ZHhucmV0NXp6MA=="
                     >
                     </FotoPerfil>
 
@@ -84,6 +91,7 @@ export const Time = () => {
                     descricaoImagem="Foto de Gabriel"
                     nome="Gabriel Costa"
                     cargo="Engenheiro de software"
+                    linkInstagram="https://www.instagram.com/eubelel?igsh=OTNhMnRnbGFrNnE="
                     >
                     </FotoPerfil>
 
