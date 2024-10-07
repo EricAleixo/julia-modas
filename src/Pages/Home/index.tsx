@@ -5,6 +5,7 @@ import { Produtos } from "./components/Produtos/"
 import { Anuncios } from "./components/Anuncios/"
 import { Email } from "./components/Email/"
 import { Membros } from "./components/Membros/"
+import { Time } from "./components/Time"
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Anuncios></Anuncios>
       <Email></Email>
       <Membros></Membros>
+      <Time></Time>
     </div>
 
   )
