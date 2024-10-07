@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 
+import { calcularDesconto } from "../../../../../shared/Funcoes/calcularDesconto"
+
 interface CardProps {
     imagem: string,
     nome: string,
@@ -9,11 +11,6 @@ interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({ imagem, preco, nome, fornecedor, desconto = 0 }) => {
-
-    const calcularDesconto = (preco: number) => {
-        const precoDescontado = preco - preco * (desconto / 100)
-        return precoDescontado.toFixed(2)
-    }
 
     return (
         <div>
@@ -41,7 +38,7 @@ export const Card: React.FC<CardProps> = ({ imagem, preco, nome, fornecedor, des
 
                 <div className="flex flex-col items-end">
                     {desconto > 0 &&
-                        <span className="font-bold text-gray-600 lg:text-lg">R${calcularDesconto(preco)}</span>}
+                        <span className="font-bold text-gray-600 lg:text-lg">R${calcularDesconto(preco, desconto)}</span>}
                     {desconto > 0 ?
                         <span className="text-sm text-red-500 line-through">R${preco}</span>
                         : <span className="font-bold text-gray-600 lg:text-lg">R${preco}</span>}

@@ -21,9 +21,9 @@ export const Produtos = () => {
                     <Card
                     imagem={imagemValter} 
                     nome="Traje elegante" 
-                    preco={19.45} 
+                    preco={50.00} 
                     fornecedor="Pela Valterlândia"
-                    desconto={30}>
+                    desconto={50}>
                     </Card>
 
                     <Card
@@ -51,7 +51,8 @@ export const Produtos = () => {
                     imagem={imagemAyrton}
                     nome = "kit pai e filho"
                     preco={29.99}
-                    fornecedor="Por Ramon Menezes">
+                    fornecedor="Por Ramon Menezes"
+                    desconto={60}>
                     </Card>
                     
                 </div>

@@ -2,6 +2,8 @@ import { useLocation } from "react-router-dom"
 
 import { Cabecalho } from "../../shared/Cabecalho/Cabecalho"
 
+import { calcularDesconto } from "../../shared/Funcoes/calcularDesconto"
+
 export const CardProduto = () => {
 
     const location = useLocation()
@@ -9,11 +11,6 @@ export const CardProduto = () => {
 
     const desativarLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault()
-    }
-
-    const calcularDesconto = (preco: number) => {
-        const precoDescontado = preco - preco * (desconto / 100)
-        return precoDescontado.toFixed(2)
     }
 
     return (
@@ -69,7 +66,7 @@ export const CardProduto = () => {
                             </div>
                             <div className="mb-4">
                                 <div className="flex items-end gap-2">
-                                    <span className="text-xl font-bold text-gray-800 md:text-2xl">${calcularDesconto(preco)}</span>
+                                    <span className="text-xl font-bold text-gray-800 md:text-2xl">${calcularDesconto(preco, desconto)}</span>
                                     {desconto > 0 &&
                                         <span className="mb-0.5 text-red-500 line-through">${preco}</span>}
                                 </div>
