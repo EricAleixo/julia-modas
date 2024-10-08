@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom"
 
 import { Cabecalho } from "../../shared/Cabecalho"
+import { Rodape } from "../../shared/Rodape"
 
 import { calcularDesconto } from "../../shared/Funcoes/calcularDesconto"
 
@@ -87,6 +88,7 @@ export const CardProduto = () => {
                     </div>
                 </div>
             </div>
+            <Rodape></Rodape>
         </div>
     )
 }

@@ -6,6 +6,7 @@ import { Anuncios } from "./components/Anuncios/"
 import { Email } from "./components/Email/"
 import { Membros } from "./components/Membros/"
 import { Time } from "./components/Time"
+import { Rodape } from "../../shared/Rodape/" 
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Email></Email>
       <Membros></Membros>
       <Time></Time>
+      <Rodape></Rodape>
     </div>
 
   )
