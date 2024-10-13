@@ -64,7 +64,7 @@ export const Rodape = () => {
                     </div>
 
                     <div>
-                        <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">Compania</div>
+                        <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">Companhia</div>
 
                         <nav className="flex flex-col gap-4">
                             <div>
@@ -112,7 +112,7 @@ export const Rodape = () => {
                     </div>
 
                     <div>
-                        <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">Legal</div>
+                        <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">Outros</div>
 
                         <nav className="flex flex-col gap-4">
                             <div>
