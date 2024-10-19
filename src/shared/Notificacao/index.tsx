@@ -1,6 +1,9 @@
+import { motion } from "framer-motion"
+
 export const Notificacao = () => {
     return (
-        <div id="marketing-banner" className="fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 ">
+        <motion.div id="marketing-banner" className="fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 "
+        >
             <div className="flex flex-col items-start mb-3 me-4 md:items-center md:flex-row md:mb-0">
                 <a href="https://flowbite.com/" className="flex items-center mb-2 border-gray-200 md:pe-4 md:me-4 md:border-e md:mb-0 dark:border-gray-600">
                 <img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/6366f1/shopping-cart.png" alt="shopping-cart" />
@@ -17,6 +20,6 @@ export const Notificacao = () => {
                     <span className="sr-only">Feche o banner</span>
                 </button>
             </div>
-        </div>
+        </motion.div>
     )
 }
