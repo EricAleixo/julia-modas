@@ -2,8 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import './index.css'
+
 import Home from './Pages/Home'
 import { CardProduto } from './Pages/CardProduto/CardProduto'
+import { FormularioCadastro } from './Pages/Form'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "produto",
     element: <CardProduto></CardProduto>
+  },
+  {
+    path:"login",
+    element: <FormularioCadastro></FormularioCadastro>
   }
 ])
 
