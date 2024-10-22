@@ -7,17 +7,34 @@ import { useEffect, useState } from "react"
 
 import { api } from "../../services/api"
 
+
+interface Client{
+
+    id: number,
+    nome: string,
+    email: string,
+    senha: string,
+    vip: boolean,
+    totalCompras: number,
+    data_criacao: string
+
+}
+
 export const ContaPage = () => {
 
-    const getCliens = async () => {
+    const [clients, setClients] = useState<Client[]>([])
 
-        const clients = await api.get("/client")
-        return clients
+    const getClietns = async () => {
+
+        const clientsFull = await api.get("/client")
+        const clientsData = clientsFull.data
+        setClients(clientsData)
+        // setClients(clientsData)
 
     }
 
     useEffect(() => {
-        getCliens()
+        getClietns()
     }, [])
 
 
