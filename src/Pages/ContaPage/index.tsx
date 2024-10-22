@@ -19,7 +19,7 @@ export const ContaPage = () => {
                                             Usuários
                                         </h2>
                                         <p className="text-sm text-gray-600">
-                                            Adicione usuários, edit e mais
+                                            Adicione usuários, edite e mais
                                         </p>
                                     </div>
                                     <div>
