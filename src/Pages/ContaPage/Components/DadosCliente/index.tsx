@@ -1,10 +1,3 @@
-interface DadosClienteProps{
-
-    nome: string,
-    email: string
-
-}
-
 export const DadosCliente = () => {
 
     return (
