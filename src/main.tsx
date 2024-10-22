@@ -6,6 +6,7 @@ import './index.css'
 import Home from './Pages/Home'
 import { CardProduto } from './Pages/CardProduto/CardProduto'
 import { FormularioCadastro } from './Pages/Form'
+import { ContaPage } from './Pages/ContaPage'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path:"login",
     element: <FormularioCadastro></FormularioCadastro>
+  },
+  {
+    path:"conta",
+    element: <ContaPage></ContaPage>
   }
 ])
 
