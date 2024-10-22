@@ -1,22 +1,9 @@
-import { useEffect } from "react";
 
 import { Cabecalho } from "../../shared/Cabecalho"
 import { Rodape } from "../../shared/Rodape";
 
-import { api } from "../../services/api";
 
 export const FormularioCadastro: React.FC = () => {
-
-  const getCliens = async() => {
-
-    const clients = await api.get("/client")
-    console.log(clients)
-
-  }
-
-  useEffect(()=>{
-    getCliens()
-  }, [])
 
   return (
     <div>
