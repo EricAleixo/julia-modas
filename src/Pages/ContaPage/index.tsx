@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
 import { api } from "../../services/api"
 
 
-interface Client{
+interface Client {
 
     id: number,
     nome: string,
@@ -27,16 +27,13 @@ export const ContaPage = () => {
     const getClietns = async () => {
 
         const clientsFull = await api.get("/client")
-        const clientsData = clientsFull.data
-        setClients(clientsData)
-        // setClients(clientsData)
+        setClients(clientsFull.data)
 
     }
 
     useEffect(() => {
         getClietns()
     }, [])
-
 
     return (
         <div>
@@ -115,14 +112,18 @@ export const ContaPage = () => {
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-200">
-                                        
-                                        <DadosCliente
-                                        nome="Eric"
-                                        email="ericaleixo@gmail.com"
-                                        senha="azul20264552"
-                                        vip={false}
-                                        totalCompras={7}
-                                        data_criacao="22/10/2024"></DadosCliente>
+
+                                        {clients.map(client => (
+                                            <div key={client.id}>
+                                                <DadosCliente
+                                                    nome={client.nome}
+                                                    email={client.email}
+                                                    senha={client.senha}
+                                                    vip={client.vip}
+                                                    totalCompras={client.totalCompras}
+                                                    data_criacao={client.data_criacao}></DadosCliente>
+                                            </div>
+                                        ))}
 
                                     </tbody>
                                 </table>
