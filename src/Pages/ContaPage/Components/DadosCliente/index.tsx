@@ -2,6 +2,7 @@
 
 interface DadosClientesProps {
 
+    id: string
     nome: string,
     email: string,
     senha: string,
@@ -13,11 +14,11 @@ interface DadosClientesProps {
 
 
 
-export const DadosCliente: React.FC<DadosClientesProps> = ({ nome, email, senha, vip, totalCompras, data_criacao }) => {
+export const DadosCliente: React.FC<DadosClientesProps> = ({id, nome, email, senha, vip, totalCompras, data_criacao }) => {
 
 
     return (
-        <tr>
+        <tr id={id}>
             <td className="size-px whitespace-nowrap">
                 <div className="ps-6 py-3">
                     <label htmlFor="hs-at-with-checkboxes-12" className="flex">

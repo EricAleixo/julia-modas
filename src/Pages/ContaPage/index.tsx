@@ -114,15 +114,15 @@ export const ContaPage = () => {
                                     <tbody className="divide-y divide-gray-200">
 
                                         {clients.map(client => (
-                                            <div key={client.id}>
-                                                <DadosCliente
-                                                    nome={client.nome}
-                                                    email={client.email}
-                                                    senha={client.senha}
-                                                    vip={client.vip}
-                                                    totalCompras={client.totalCompras}
-                                                    data_criacao={client.data_criacao}></DadosCliente>
-                                            </div>
+                                            <DadosCliente
+                                                id={client[0]}
+                                                nome={client[1]}
+                                                email={client[2]}
+                                                senha={client[3]}
+                                                vip={client[4]}
+                                                totalCompras={client[5]}
+                                                data_criacao={client[6]}>
+                                            </DadosCliente>
                                         ))}
 
                                     </tbody>
