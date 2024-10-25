@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
 import { api } from "../../services/api"
 
 
-interface Client{
+interface Client {
 
     id: number,
     nome: string,
@@ -26,7 +26,6 @@ export const ContaPage = () => {
 
     const getClietns = async () => {
         const clientsFull = await api.get("/client")
-
         setClients(clientsFull.data)
 
     }
@@ -34,7 +33,6 @@ export const ContaPage = () => {
     useEffect(() => {
         getClietns()
     }, [])
-
 
     return (
         <div>
@@ -113,14 +111,18 @@ export const ContaPage = () => {
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-200">
-                                        
-                                        <DadosCliente
-                                        nome="Eric"
-                                        email="ericaleixo@gmail.com"
-                                        senha="azul20264552"
-                                        vip={false}
-                                        totalCompras={7}
-                                        data_criacao="22/10/2024"></DadosCliente>
+
+                                        {clients.map(() => (
+                                            <DadosCliente
+                                                id="wdiojqd"
+                                                nome="wdiojqd"
+                                                email="wdiojqd"
+                                                senha="wdiojqd"
+                                                vip={false}
+                                                totalCompras={22}
+                                                data_criacao="wdiojqd">
+                                            </DadosCliente>
+                                        ))}
 
                                     </tbody>
                                 </table>

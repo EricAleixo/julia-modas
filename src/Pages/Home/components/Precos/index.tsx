@@ -4,7 +4,8 @@ import { CardTipo } from "./componentes/CardTipo";
 
 import imagemIttalo from "./assets/ittalo.JPG";
 import imagemAyrton from "./assets/ayrton.JPG";
-import imagemAdriana from "./assets/adriana.jpg";
+import imagemAdriana from "./assets/adriana.png";
+import imagemTrioElegante from "./assets/trioElegante.png";
 
 export const Precos = () => {
   const cards = [
@@ -31,10 +32,10 @@ export const Precos = () => {
     },
     {
       id: 4,
-      imagem: imagemIttalo,
-      genero: "Masculino",
+      imagem: imagemTrioElegante,
+      genero: "Feminino",
       tipo: "Negócios Casuais",
-      descricao: "Foto de roupas",
+      descricao: "Foto de roupas para negócios casuais femininas",
     },
   ];
 
