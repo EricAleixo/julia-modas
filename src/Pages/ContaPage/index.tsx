@@ -25,11 +25,9 @@ export const ContaPage = () => {
     const [clients, setClients] = useState<Client[]>([])
 
     const getClietns = async () => {
-
         const clientsFull = await api.get("/client")
-        const clientsData = clientsFull.data
-        setClients(clientsData)
-        // setClients(clientsData)
+
+        setClients(clientsFull.data)
 
     }
 
