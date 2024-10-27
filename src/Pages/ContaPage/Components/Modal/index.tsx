@@ -1,7 +1,7 @@
 interface ModalProps{
 
     modalStatus: boolean
-    setIsOpen: unknown
+    setIsOpen: (modalStatus: boolean) => void
 
 }
 
