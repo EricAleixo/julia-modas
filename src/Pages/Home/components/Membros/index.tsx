@@ -1,3 +1,5 @@
+import { ItemLista } from "./components/ItemLista"
+
 export const Membros = () => {
     return (
         <div className="bg-white py-6 sm:py-8 lg:py-12">
@@ -22,29 +24,9 @@ export const Membros = () => {
 
                         <ul className="mb-6 space-y-2 text-gray-300">
 
-                            <li className="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
-
-                                <span>10% de desconto em todos os produtos</span>
-                            </li>
-
-                            <li className="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
-
-                                <span>Convites para promoções exclusivas</span>
-                            </li>
-
-                            <li className="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
-
-                                <span>Dicas de estilo</span>
-                            </li>
+                            <ItemLista text="10% de desconto em todos os produtos"></ItemLista>
+                            <ItemLista text="Convites para promoções exclusivas"></ItemLista>
+                            <ItemLista text="Dicas de estilo"></ItemLista>
 
                         </ul>
 
@@ -68,45 +50,15 @@ export const Membros = () => {
 
                         <ul className="mb-6 space-y-2 text-indigo-100">
 
-                            <li className="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
+                            <ItemLista text="15% de desconto em todas as compras"></ItemLista>
 
-                                <span>15% de desconto em todas as compras</span>
-                            </li>
+                            <ItemLista text="Acesso exclusivo a pré-vendas e coleções limitadas"></ItemLista>
 
-                            <li className="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
+                            <ItemLista text="Consultoria de estilo personalizada com um stylist dedicado"></ItemLista>
 
-                                <span>Acesso exclusivo a pré-vendas e coleções limitadas</span>
-                            </li>
+                            <ItemLista text="Convites para eventos VIP e desfiles de moda"></ItemLista>
 
-                            <li className="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
-
-                                <span>Consultoria de estilo personalizada com um stylist dedicado</span>
-                            </li>
-
-                            <li className="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
-
-                                <span>Convites para eventos VIP e desfiles de moda</span>
-                            </li>
-
-                            <li className="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
-
-                                <span>Frete grátis em todas as compras</span>
-                            </li>
+                            <ItemLista text="Frete grátis em todas as compras"></ItemLista>
                         </ul>
 
                         <a href="#" className="block rounded-lg bg-indigo-200 bg-opacity-50 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-300 focus-visible:ring active:bg-indigo-400 md:text-base">Adquira o Vip Pro</a>
