@@ -1,4 +1,5 @@
-
+import { TiDelete } from "react-icons/ti"
+import {FaCircleCheck} from "react-icons/fa6"
 
 interface DadosClientesProps {
 
@@ -45,17 +46,10 @@ export const DadosCliente: React.FC<DadosClientesProps> = ({ id, nome, email, se
             <td className="size-px whitespace-nowrap">
                 <div className="px-6 py-3">
                     {vip ? <span className="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">
-                        <svg className="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                        </svg>
+                        <FaCircleCheck className="text-sm"></FaCircleCheck>
                         PRO
                     </span> : <span className="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-red-200 text-red-800 rounded-full">
-                        <svg className="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 0 1 .708 0L8 6.586l1.938-1.94a.5.5 0 1 1 .708.708L8.707 7.293l1.94 1.938a.5.5 0 1 1-.708.708L8 8.707l-1.938 1.94a.5.5 0 1 1-.708-.708l1.94-1.938-1.94-1.94a.5.5 0 0 1 0-.708z" />
-                        </svg>
-
-
-
+                        <TiDelete className="text-xl" />
                         Não ativado
                     </span>}
                 </div>
