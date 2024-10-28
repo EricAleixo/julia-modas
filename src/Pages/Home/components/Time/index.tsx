@@ -32,7 +32,7 @@ export const Time = () => {
         {
             id: 3,
             urlImagem: ericFoto,
-            nome: "Gustavo Daniel",
+            nome: "Eric Aleixo",
             descricaoImagem: "Foto de Eric",
             cargo: "CTO / Desenvolvedor Full-Stack",
             linkInstagram: "https://www.instagram.com/eric.alxy/profilecard/?igsh=aXo2dnB0dGZ4Nzcw"
