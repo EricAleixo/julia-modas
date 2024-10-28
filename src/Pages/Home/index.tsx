@@ -5,6 +5,7 @@ import { Precos } from "./components/Precos/"
 import { Produtos } from "./components/Produtos/"
 import { Anuncios } from "./components/Anuncios/"
 import { Email } from "./components/Email/"
+import { Sobre } from "./components/Planos"
 import { Membros } from "./components/Membros/"
 import { Time } from "./components/Time"
 import { Rodape } from "../../shared/Rodape/" 
@@ -23,6 +24,7 @@ function App() {
       <Anuncios></Anuncios>
       <Email></Email>
       <Membros></Membros>
+      <Sobre></Sobre>
       <Time></Time>
       <Rodape></Rodape>
     </div>

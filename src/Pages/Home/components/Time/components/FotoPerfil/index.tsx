@@ -24,15 +24,15 @@ export const FotoPerfil: React.FC<FotoPerfilPropos> = ({ urlImagem, descricaoIma
                 <div className="flex justify-center">
                     <div className="flex gap-4">
                         <a href="#" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-                            <FaLinkedin className="text-1xl" />
+                            <FaLinkedin className="text-2xl" />
                         </a>
 
                         <a href={linkInstagram} target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-                            <FaInstagram className="text-1xl" />
+                            <FaInstagram className="text-2xl" />
                         </a>
 
                         <a href="#" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-                            <FaGithubAlt className="text-1xl" />
+                            <FaGithubAlt className="text-2xl" />
                         </a>
                     </div>
                 </div>

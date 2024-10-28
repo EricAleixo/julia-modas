@@ -25,7 +25,7 @@ export const Cabecalho:React.FC<LinksProps> = ({onClick}) => {
                     <Link to="/"><a href="#apresentacao" className="text-lg font-semibold text-indigo-500">Início</a></Link>
                     <a href="#colecoes" onClick={onClick} className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Coleções</a>
                     <a href="#precos" onClick={onClick} className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Preço</a>
-                    <a href="#" onClick={onClick} className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Sobre</a>
+                    <a href="#sobre" onClick={onClick} className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Sobre</a>
                 </nav>
 
                 <div className="flex">

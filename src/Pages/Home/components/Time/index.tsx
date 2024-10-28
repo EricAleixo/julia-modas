@@ -9,7 +9,76 @@ import ericFoto from "./assets/eric.jpeg"
 import thaysllaFoto from "./assets/thayslla.jpg"
 import gabrielFoto from "./assets/gabes.jpg"
 
+
 export const Time = () => {
+
+    const membrosEquipe = [
+        {
+            id: 1,
+            urlImagem: juliaFoto,
+            nome: "Maria Júlia",
+            descricaoImagem: "Foto de Júlia" ,
+            cargo: "Fundadora /CEO",
+            linkInstagram: "https://www.instagram.com/majuu.fernandess?igsh=MWpjbnZ5NGJwbGN6dQ=="
+        },
+        {
+            id: 2,
+            urlImagem: gustavoFoto,
+            nome: "Gustavo Daniel",
+            descricaoImagem: "Foto de Gustavo",
+            cargo: "COO /CFO",
+            linkInstagram: "https://www.instagram.com/eudsantossilva?igsh=cGN0Y25nemV1bXBq"
+        },
+        {
+            id: 3,
+            urlImagem: ericFoto,
+            nome: "Gustavo Daniel",
+            descricaoImagem: "Foto de Eric",
+            cargo: "CTO / Desenvolvedor Full-Stack",
+            linkInstagram: "https://www.instagram.com/eric.alxy/profilecard/?igsh=aXo2dnB0dGZ4Nzcw"
+        },
+        {
+            id: 4,
+            urlImagem: emmaellyFoto,
+            nome: "Emmaely Gomes",
+            descricaoImagem: "Foto de Emmaely",
+            cargo: "CD / Estilista Chefe",
+            linkInstagram: "https://www.instagram.com/_maely_gomes_?igsh=YTc2eTlubXhwdjI3"
+        },
+        {
+            id: 5,
+            urlImagem: yuriFoto,
+            nome: "Yuri Martins",
+            descricaoImagem: "Foto de Yuri",
+            cargo: "Gerente de Marketing",
+            linkInstagram: "https://www.instagram.com/yuri_martin._?igsh=YW1yMmV0YWRnZmdq"
+        },
+        {
+            id: 6,
+            urlImagem: ryanFoto,
+            nome: "Ryan Gustavo",
+            descricaoImagem: "Foto de Ryan",
+            cargo: "Analista de E-commerce",
+            linkInstagram: "https://www.instagram.com/ryann.xy2?igsh=c3d5bm13MzJxeWU="
+        },
+        {
+            id: 7,
+            urlImagem: thaysllaFoto,
+            nome: "Thayslla Karla",
+            descricaoImagem: "Foto de Thayslla",
+            cargo: "Designer de UX/UI",
+            linkInstagram: "https://www.instagram.com/thaysllasotnas?igsh=MTg4ZHhucmV0NXp6MA=="
+        },
+        {
+            id: 8,
+            urlImagem: gabrielFoto,
+            nome: "Gabriel Costa",
+            descricaoImagem: "Foto de Gabriel",
+            cargo: "Engenheiro de software",
+            linkInstagram: "https://www.instagram.com/eubelel?igsh=OTNhMnRnbGFrNnE="
+        },
+    ]
+
     return (
         <div className="bg-white py-6 sm:py-8 lg:py-12">
             <div className="mx-auto max-w-screen-xl px-4 md:px-8">
@@ -23,77 +92,18 @@ export const Time = () => {
                 <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
 
                     
-                    <FotoPerfil
-                    urlImagem={juliaFoto}
-                    descricaoImagem="Foto de Júlia"
-                    nome="Maria Júlia"
-                    cargo="Fundadora / CEO"
-                    linkInstagram="https://www.instagram.com/majuu.fernandess?igsh=MWpjbnZ5NGJwbGN6dQ=="
-                    >
-                    </FotoPerfil>
-                    
-                    <FotoPerfil
-                    urlImagem={gustavoFoto}
-                    descricaoImagem="Foto de Gustavo"
-                    nome="Gustavo Daniel"
-                    cargo="COO /CFO"
-                    linkInstagram="https://www.instagram.com/eudsantossilva?igsh=cGN0Y25nemV1bXBq"
-                    >
-                    </FotoPerfil>
-                    
-                    <FotoPerfil
-                    urlImagem={ericFoto}
-                    descricaoImagem="Foto de Eric"
-                    nome="Eric Aleixo"
-                    cargo="CTO / Desenvolvedor Full-Stack"
-                    linkInstagram="https://www.instagram.com/eric.alxy/profilecard/?igsh=aXo2dnB0dGZ4Nzcw"
-                    >
-                    </FotoPerfil>
-                    
-                    <FotoPerfil
-                    urlImagem={emmaellyFoto}
-                    descricaoImagem="Foto de Emmaely"
-                    nome="Emmaely Gomes"
-                    cargo="CD / Estilista Chefe"
-                    linkInstagram="https://www.instagram.com/_maely_gomes_?igsh=YTc2eTlubXhwdjI3"
-                    >
-                    </FotoPerfil>
-                    
-                    <FotoPerfil
-                    urlImagem={yuriFoto}
-                    descricaoImagem="Foto de Yuri"
-                    nome="Yuri Martins"
-                    cargo="Gerente de Marketing"
-                    linkInstagram="https://www.instagram.com/yuri_martin._?igsh=YW1yMmV0YWRnZmdq"
-                    >
-                    </FotoPerfil>
-                    
-                    <FotoPerfil
-                    urlImagem={ryanFoto}
-                    descricaoImagem="Foto de Ryan"
-                    nome="Ryan Gustavo"
-                    cargo="Analista de E-commerce"
-                    linkInstagram="https://www.instagram.com/ryann.xy2?igsh=c3d5bm13MzJxeWU="
-                    >
-                    </FotoPerfil>
-
-                    <FotoPerfil
-                    urlImagem={thaysllaFoto}
-                    descricaoImagem="Foto de Thayslla"
-                    nome="Thayslla Karla"
-                    cargo="Designer de UX/UI"
-                    linkInstagram="https://www.instagram.com/thaysllasotnas?igsh=MTg4ZHhucmV0NXp6MA=="
-                    >
-                    </FotoPerfil>
-
-                    <FotoPerfil
-                    urlImagem={gabrielFoto}
-                    descricaoImagem="Foto de Gabriel"
-                    nome="Gabriel Costa"
-                    cargo="Engenheiro de software"
-                    linkInstagram="https://www.instagram.com/eubelel?igsh=OTNhMnRnbGFrNnE="
-                    >
-                    </FotoPerfil>
+                    {
+                        membrosEquipe.map(membro =>(
+                            <FotoPerfil
+                            urlImagem={membro.urlImagem}
+                            descricaoImagem={membro.descricaoImagem}
+                            nome={membro.nome}
+                            cargo={membro.cargo}
+                            linkInstagram={membro.linkInstagram}
+                            >
+                            </FotoPerfil>
+                        ))
+                    }
 
                 </div>
             </div>

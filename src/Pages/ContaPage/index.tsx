@@ -3,8 +3,9 @@ import { Rodape } from "../../shared/Rodape"
 import { DadosCliente } from "./Components/DadosCliente"
 import { Modal } from "./Components/Modal"
 
-import { useEffect, useState } from "react"
+import { FaPlus } from "react-icons/fa"
 
+import { useEffect, useState } from "react"
 import { api } from "../../services/api"
 
 
@@ -58,9 +59,7 @@ export const ContaPage = () => {
                                             </a>
                                             <button className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700"
                                             onClick={() => setIsOpen(!isOpen)}>
-                                                <svg className="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                    <path d="M5 12h14" /><path d="M12 5v14" />
-                                                </svg>
+                                                <FaPlus></FaPlus>
                                                 Adicionar Usuário
                                             </button>
 
