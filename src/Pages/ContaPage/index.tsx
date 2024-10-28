@@ -16,7 +16,7 @@ interface Client {
     email: string;
     senha: string;
     vip: boolean;
-    totalCompras: number;
+    total_compras: number;
     data_criacao: string;
 
 }
@@ -114,7 +114,7 @@ export const ContaPage = () => {
                                                 email={client.email}
                                                 senha={client.senha}
                                                 vip={client.vip}
-                                                totalCompras={client.totalCompras}
+                                                totalCompras={client.total_compras}
                                                 data_criacao={client.data_criacao}
                                             />
                                         ))}
