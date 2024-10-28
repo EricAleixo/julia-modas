@@ -7,6 +7,7 @@ interface ModalProps {
     modalStatus: boolean
     setIsOpen: (modalStatus: boolean) => void
 
+
 }
 
 export const Modal: React.FC<ModalProps> = ({ modalStatus, setIsOpen }) => {
@@ -19,6 +20,9 @@ export const Modal: React.FC<ModalProps> = ({ modalStatus, setIsOpen }) => {
             "vip": true,
             "totalCompras": clientTotalCompras.current?.value
         })
+
+        setIsOpen(!modalStatus)
+        window.location.reload()
     }
 
     const clientName = useRef<HTMLInputElement>(null)
