@@ -11,9 +11,9 @@ export const Modal: React.FC<ModalProps> = ({modalStatus, setIsOpen}) => {
 
         return (
             <div id="modal" className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
-                <div className="bg-white md:w-1/2 p-6">
+                <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-1/2 p-6">
     
-                    <div className="bg-white rounded-xl shadow p-4 sm:p-7">
+                    <div className="bg-white sm:p-7">
                         <div className="text-center mb-8">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Novo cliente</h2>
                             <p className="text-sm text-gray-600">
