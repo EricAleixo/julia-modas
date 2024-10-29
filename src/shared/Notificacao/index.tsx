@@ -1,6 +1,9 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
+import logo from "../../../public/logo-julia-modas.jpeg"
+
+
 export const Notificacao = () => {
   
     const fecharBotao = () =>{
@@ -15,7 +18,7 @@ export const Notificacao = () => {
         >
             <div className="flex flex-col items-start mb-3 me-4 md:items-center md:flex-row md:mb-0">
                 <a href="#" className="flex items-center mb-2 border-gray-200 md:pe-4 md:me-4 md:border-e md:mb-0 dark:border-gray-600">
-                <img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/6366f1/shopping-cart.png" alt="shopping-cart" />
+                <img width="64" height="64" src={logo} alt="shopping-cart" />
                         <span className="self-center text-lg font-semibold whitespace-nowrap ">Júlia Modas</span>
                 </a>
                 <p className="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">Ainda não se cadastrou? Faça um cadastro e aproveite!</p>
