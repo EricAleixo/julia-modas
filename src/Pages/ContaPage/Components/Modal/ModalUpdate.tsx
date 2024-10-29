@@ -28,6 +28,7 @@ export const ModalUpdate: React.FC<ModalProps> = ({ modalStatus, setIsOpen, id})
         })
 
         setIsOpen(!modalStatus)
+        window.location.reload()
     }
 
     const clientName = useRef<HTMLInputElement>(null)
@@ -38,6 +39,7 @@ export const ModalUpdate: React.FC<ModalProps> = ({ modalStatus, setIsOpen, id})
 
     const deleteClient = async () =>{
         await api.delete(`/client/${id}`)
+        window.location.reload()
     }
 
     if (modalStatus) {
