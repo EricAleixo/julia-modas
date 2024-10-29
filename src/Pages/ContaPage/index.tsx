@@ -1,7 +1,7 @@
 import { Cabecalho } from "../../shared/Cabecalho"
 import { Rodape } from "../../shared/Rodape"
 import { DadosCliente } from "./Components/DadosCliente"
-import { Modal } from "./Components/Modal"
+import { ModalCreate } from "./Components/Modal/ModalCreate"
 
 import { FaPlus } from "react-icons/fa"
 
@@ -63,7 +63,7 @@ export const ContaPage = () => {
                                                 Adicionar Usuário
                                             </button>
 
-                                            <Modal modalStatus = {isOpen} setIsOpen = {setIsOpen}></Modal>
+                                            <ModalCreate modalStatus = {isOpen} setIsOpen = {setIsOpen}></ModalCreate>
 
                                         </div>
                                     </div>

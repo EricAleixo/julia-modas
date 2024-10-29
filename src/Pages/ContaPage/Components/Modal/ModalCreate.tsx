@@ -6,11 +6,9 @@ interface ModalProps {
 
     modalStatus: boolean
     setIsOpen: (modalStatus: boolean) => void
-
-
 }
 
-export const Modal: React.FC<ModalProps> = ({ modalStatus, setIsOpen }) => {
+export const ModalCreate: React.FC<ModalProps> = ({ modalStatus, setIsOpen }) => {
 
     const createClient = async () => {
         await api.post("/client", {

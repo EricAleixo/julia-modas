@@ -1,6 +1,9 @@
 import { TiDelete } from "react-icons/ti"
-import {FaCircleCheck} from "react-icons/fa6"
+import { FaCircleCheck } from "react-icons/fa6"
 
+import { useState } from "react"
+
+import { ModalUpdate } from "../Modal/ModalUpdate"
 interface DadosClientesProps {
 
     id: string
@@ -17,6 +20,7 @@ interface DadosClientesProps {
 
 export const DadosCliente: React.FC<DadosClientesProps> = ({ id, nome, email, senha, vip, totalCompras, data_criacao }) => {
 
+    const [isOpen, setIsOpen] = useState(false)
 
     return (
         <tr id={id}>
@@ -68,9 +72,19 @@ export const DadosCliente: React.FC<DadosClientesProps> = ({ id, nome, email, se
             </td>
             <td className="size-px whitespace-nowrap">
                 <div className="px-6 py-1.5">
-                    <a className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="#">
+                    <button className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
+                        onClick={() => setIsOpen(!isOpen)} >
                         Editar
-                    </a>
+                    </button>
+                    <ModalUpdate
+                        modalStatus={isOpen}
+                        setIsOpen={setIsOpen}
+                        id={id}
+                        nome={nome}
+                        email={email}
+                        senha={senha}
+                        totalCompras={totalCompras}>
+                    </ModalUpdate>
                 </div>
             </td>
         </tr>
