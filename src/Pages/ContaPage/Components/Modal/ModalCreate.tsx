@@ -20,7 +20,6 @@ export const ModalCreate: React.FC<ModalProps> = ({ modalStatus, setIsOpen }) =>
         })
 
         setIsOpen(!modalStatus)
-        window.location.reload()
     }
 
     const clientName = useRef<HTMLInputElement>(null)
