@@ -5,6 +5,8 @@ import { BsBag } from "react-icons/bs"
 import { IoPersonOutline } from "react-icons/io5"
 import { IoMenu } from "react-icons/io5"
 
+import logo from "../../../public/logo-julia-modas.jpeg"
+
 interface LinksProps{
     onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void 
 }
@@ -15,7 +17,7 @@ export const Cabecalho:React.FC<LinksProps> = ({onClick}) => {
             <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
 
                 <a href="/" className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
-                    <img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/6366f1/shopping-cart.png" alt="shopping-cart" />
+                    <img width="64" height="64" src={logo} alt="shopping-cart" />
 
                     Júlia Modas
                 </a>
