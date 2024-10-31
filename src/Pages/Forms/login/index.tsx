@@ -1,8 +1,9 @@
-import { Cabecalho } from "../../shared/Cabecalho"
-import { Rodape } from "../../shared/Rodape";
+import { Link } from "react-router-dom";
+import { Cabecalho } from "../../../shared/Cabecalho"
+import { Rodape } from "../../../shared/Rodape";
 
 
-export const FormularioCadastro: React.FC = () => {
+export const FormularioLogin: React.FC = () => {
 
   return (
     <div>
@@ -17,14 +18,16 @@ export const FormularioCadastro: React.FC = () => {
               Ainda não tem uma conta? Crie uma para aproveitar descontos especiais e acompanhar seus pedidos.
             </p>
 
-            <div className="mt-8 grid">
-              <button
-                type="button"
-                className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-              >
-                Crie uma conta
-              </button>
-            </div>
+            <Link to="/singup">
+              <div className="mt-8 grid">
+                <button
+                  type="button"
+                  className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  Crie uma conta
+                </button>
+              </div>
+            </Link>
 
             <div className="py-6 flex items-center text-sm text-gray-400 uppercase before:flex-1 before:border-t before:me-6 after:flex-1 after:border-t after:ms-6">
               Faça login

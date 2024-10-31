@@ -5,7 +5,8 @@ import './index.css'
 
 import Home from './Pages/Home'
 import { CardProduto } from './Pages/CardProduto/CardProduto'
-import { FormularioCadastro } from './Pages/Form'
+import { FormularioLogin } from './Pages/Forms/login'
+import { FormularioSingUp } from './Pages/Forms/singUp'
 import { ContaPage } from './Pages/ContaPage'
 
 const router = createBrowserRouter([
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
   },
   {
     path:"login",
-    element: <FormularioCadastro></FormularioCadastro>
+    element: <FormularioLogin></FormularioLogin>
+  },
+  {
+    path:"singup",
+    element: <FormularioSingUp></FormularioSingUp>
   },
   {
     path:"conta",
