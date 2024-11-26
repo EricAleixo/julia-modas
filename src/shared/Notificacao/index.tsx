@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
-import logo from "../../../public/logo-julia-modas.jpeg"
+import logo from "../../icon/logo-julia-modas.jpeg"
 
 
 export const Notificacao = () => {
