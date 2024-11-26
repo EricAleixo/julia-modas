@@ -5,7 +5,7 @@ import { BsBag } from "react-icons/bs"
 import { IoPersonOutline } from "react-icons/io5"
 import { IoMenu } from "react-icons/io5"
 
-import logo from "../../../public/logo-julia-modas.jpeg"
+import logo from "../../icon/logo-julia-modas.jpeg"
 
 interface LinksProps{
     onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void 
