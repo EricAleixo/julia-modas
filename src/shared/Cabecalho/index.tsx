@@ -44,10 +44,12 @@ export const Cabecalho:React.FC<LinksProps> = ({onClick}) => {
                         </a>
                     </Link>
 
-                    <a href="#" onClick={onClick} className="flex h-12 w-12 flex-col items-center justify-center gap-1.5 transition duration-100 hover:bg-gray-100 active:bg-gray-200 sm:h-20 sm:w-20 md:h-24 md:w-24">
-                        <BsBag className="text-2xl"></BsBag>
-                        <span className="hidden text-xs font-semibold text-gray-500 sm:block">Sacola</span>
-                    </a>
+                    <Link to="/sacola">
+                        <a href="#" onClick={onClick} className="flex h-12 w-12 flex-col items-center justify-center gap-1.5 transition duration-100 hover:bg-gray-100 active:bg-gray-200 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                            <BsBag className="text-2xl"></BsBag>
+                            <span className="hidden text-xs font-semibold text-gray-500 sm:block">Sacola</span>
+                        </a>
+                    </Link>
 
                     <button type="button" className="flex h-12 w-12 flex-col items-center justify-center gap-1.5 transition duration-100 hover:bg-gray-100 active:bg-gray-200 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:hidden">
                         <IoMenu className="text-2xl"></IoMenu>

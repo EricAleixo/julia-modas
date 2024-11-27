@@ -8,6 +8,7 @@ import { CardProduto } from './Pages/CardProduto/CardProduto'
 import { FormularioLogin } from './Pages/Forms/login'
 import { FormularioSingUp } from './Pages/Forms/singUp'
 import { ContaPage } from './Pages/ContaPage'
+import { Sacola } from './Pages/Sacola'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path:"conta",
     element: <ContaPage></ContaPage>
+  },
+  {
+    path:"sacola",
+    element: <Sacola></Sacola>
   }
 ])
 
