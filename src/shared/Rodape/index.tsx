@@ -2,6 +2,8 @@ import { FaInstagram } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 
+import logo from "../../icon/logo-julia-modas.jpeg"
+
 export const Rodape = () => {
     return (
         <div className="bg-white pt-4 sm:pt-10 lg:pt-12">
@@ -10,7 +12,7 @@ export const Rodape = () => {
                     <div className="col-span-full lg:col-span-2">
                         <div className="mb-4 lg:-mt-2">
                             <a href="/" className="inline-flex items-center gap-2 text-xl font-bold text-black md:text-2xl" aria-label="logo">
-                            <img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/6366f1/shopping-cart.png" alt="shopping-cart" />
+                            <img width="64" height="64" src={logo} alt="shopping-cart" />
 
                                 Júlia Modas
                             </a>

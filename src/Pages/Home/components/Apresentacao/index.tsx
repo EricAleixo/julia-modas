@@ -22,7 +22,7 @@ export const Apresentacao = () => {
                     stiffness: 120,
                     ease: "easeInOut"
                 }}>
-                    <h1 className="mb-4 text-4xl font-bold text-black sm:text-5xl md:mb-8 md:text-6xl">Descubra o Estilo<br />que é a Sua Cara!</h1>
+                    <h1 className="mb-4 text-4xl font-bold text-black sm:text-5xl md:mb-8 md:text-6xl">Descubra o estilo<br />que é a sua Cara!</h1>
 
                     <p className="max-w-md leading-relaxed text-gray-500 xl:text-lg">Bem-vindo à Júlia Modas, onde a moda encontra a sua essência! Aqui, cada peça é cuidadosamente selecionada para refletir tendências contemporâneas e o seu estilo único.</p>
                 </motion.div>
