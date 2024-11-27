@@ -1,16 +1,15 @@
 import { ItemLista } from "./components/ItemLista";
-import { motion, useInView } from "framer-motion"; // Importando o motion e useInView
-import { useRef } from "react"; // Para usar as referências
+import { motion, useInView } from "framer-motion"; 
+import { useRef } from "react"; 
 
 export const Membros = () => {
     const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { once: true }); // Detecta quando a seção entra na tela
+    const isInView = useInView(sectionRef, { once: true });
 
     return (
         <div className="bg-white py-6 sm:py-8 lg:py-12">
             <div className="mx-auto max-w-screen-lg px-4 md:px-8">
                 <div className="mb-10 md:mb-16">
-                    {/* Título e Descrição com animação */}
                     <motion.h2
                         ref={sectionRef}
                         initial={{ opacity: 0, y: -30 }}
@@ -35,10 +34,9 @@ export const Membros = () => {
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-0">
-                    {/* Card "Vip Básico" com animação (da esquerda) */}
                     <motion.div
-                        initial={{ opacity: 0, x: -100 }} // Inicia à esquerda
-                        animate={isInView ? { opacity: 1, x: 0 } : {}} // Vai para a posição original (centro)
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.6 }}
                         className="w-full rounded-lg bg-gray-800 p-6 sm:w-1/2 sm:rounded-r-none sm:p-8 lg:w-1/3"
                     >
@@ -68,10 +66,9 @@ export const Membros = () => {
                         </a>
                     </motion.div>
 
-                    {/* Card "Vip Pro" com animação (da direita) */}
                     <motion.div
-                        initial={{ opacity: 0, x: 100 }} // Inicia à direita
-                        animate={isInView ? { opacity: 1, x: 0 } : {}} // Vai para a posição original (centro)
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.8 }}
                         className="w-full rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-400 p-6 shadow-xl sm:w-1/2 sm:p-8"
                     >

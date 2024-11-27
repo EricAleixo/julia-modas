@@ -1,10 +1,10 @@
-import { motion, useInView } from "framer-motion"; // Importe o motion e useInView
-import { useRef } from "react"; // Para criar referências
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import ofertasValter from "./assets/ofertasValter.png";
 
 export const Anuncios = () => {
     const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { once: true }); // Detecta quando a seção entra na tela
+    const isInView = useInView(sectionRef, { once: true });
 
     return (
         <div className="bg-white py-6 sm:py-8 lg:py-12">
@@ -13,11 +13,10 @@ export const Anuncios = () => {
                     className="flex flex-col overflow-hidden rounded-lg bg-gray-900 sm:flex-row md:h-80"
                     ref={sectionRef}
                 >
-                    {/* Coluna do Texto com animação ao entrar na tela */}
                     <motion.div
                         className="flex w-full flex-col p-4 sm:w-1/2 sm:p-8 lg:w-2/5"
-                        initial={{ opacity: 0, x: -100 }} // Início da animação: invisível e à esquerda
-                        animate={isInView ? { opacity: 1, x: 0 } : {}} // Anima quando entrar na tela
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <motion.h2
@@ -48,11 +47,10 @@ export const Anuncios = () => {
                         </div>
                     </motion.div>
 
-                    {/* Coluna da Imagem com animação ao entrar na tela */}
                     <motion.div
                         className="order-first h-48 w-full bg-gray-700 sm:order-none sm:h-auto sm:w-1/2 lg:w-3/5"
-                        initial={{ opacity: 0, scale: 0.9 }} // Começa invisível e com escala reduzida
-                        animate={isInView ? { opacity: 1, scale: 1 } : {}} // Se torna visível e retorna ao tamanho normal
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : {}} 
                         transition={{ duration: 0.6, delay: 0.5 }}
                     >
                         <img

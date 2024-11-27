@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 export const Sobre = () => {
     const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { once: true }); // Detecta quando a seção entra na tela
+    const isInView = useInView(sectionRef, { once: true });
 
     return (
         <div id="sobre" ref={sectionRef} className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -21,7 +21,6 @@ export const Sobre = () => {
 
             <div className="max-w-5xl mx-auto">
                 <div className="grid sm:grid-cols-2 gap-6 md:gap-12">
-                    {/* Animando as perguntas e respostas */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}

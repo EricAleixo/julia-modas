@@ -1,9 +1,9 @@
-import { motion, useInView } from "framer-motion"; // Importe o motion e useInView
-import { useRef } from "react"; // Para criar referências
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react"; 
 
 export const Email = () => {
     const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { once: true }); // Detecta quando a seção entra na tela
+    const isInView = useInView(sectionRef, { once: true }); 
 
     return (
         <div className="bg-white py-6 sm:py-8 lg:py-12">
@@ -12,7 +12,6 @@ export const Email = () => {
                     className="flex flex-col items-center rounded-lg bg-gray-100 p-4 sm:p-8"
                     ref={sectionRef}
                 >
-                    {/* Animação para o Título e Descrição */}
                     <motion.div
                         initial={{ opacity: 0, y: -30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -27,7 +26,6 @@ export const Email = () => {
                         </p>
                     </motion.div>
 
-                    {/* Animação para o Formulário */}
                     <motion.form
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -43,7 +41,6 @@ export const Email = () => {
                         </button>
                     </motion.form>
 
-                    {/* Animação para os Links de Termos */}
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
