@@ -1,5 +1,6 @@
+import { useRef, useEffect } from "react";
 import { FotoPerfil } from "./components/FotoPerfil";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 import emmaellyFoto from "./assets/emmaely.jpg";
 import juliaFoto from "./assets/julia.jpeg";
@@ -85,21 +86,50 @@ export const Time = () => {
     },
   ];
 
+  const containerRef = useRef(null);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          controls.start("visible");
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, [controls]);
+
   return (
     <motion.div
+      ref={containerRef}
       className="bg-white py-6 sm:py-8 lg:py-12"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 1 } },
+      }}
     >
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
         <motion.div
           className="mb-10 md:mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial="hidden"
+          animate={controls}
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+          }}
         >
           <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
             Conheça nossa Equipe
@@ -119,12 +149,20 @@ export const Time = () => {
             <motion.div
               key={membro.id}
               className="flex justify-center"
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                duration: 1,
-                delay: index * 0.1,
-                ease: "easeOut",
+              initial="hidden"
+              animate={controls}
+              variants={{
+                hidden: { opacity: 0, y: 50, scale: 0.9 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  transition: {
+                    duration: 1,
+                    delay: index * 0.1,
+                    ease: "easeOut",
+                  },
+                },
               }}
             >
               <FotoPerfil
