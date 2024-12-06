@@ -21,15 +21,15 @@ export const Rodape = () => {
                         <p className="mb-6 text-gray-500 sm:pr-8">30% dos lucros obtidos pela Júlia Modas, é direcionado a institutos necessitados</p>
 
                         <div className="flex gap-4">
-                            <a href="#" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+                            <a href="#" target="_blank" className="text-2xl text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
                                 <FaInstagram className="text-1xl"/>
                             </a>
 
-                            <a href="#" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+                            <a href="#" target="_blank" className="text-2xl text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
                                 <FaXTwitter className="text-1xl"></FaXTwitter>
                             </a>
 
-                            <a href="#" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+                            <a href="#" target="_blank" className="text-2xl text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
                                 <FaLinkedin className="text-1xl"></FaLinkedin>
                             </a>
                         </div>
