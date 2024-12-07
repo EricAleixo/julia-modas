@@ -24,7 +24,7 @@ export const Card: React.FC<CardProps> = ({ imagem, preco, nome, fornecedor, des
                 }
                 }>
                 <a href="#" className="group relative block h-96 overflow-hidden rounded-t-lg bg-gray-100">
-                    <img src={imagem} loading="lazy" alt="Foto de Valter" className="h-full w-full object-cover object-center transition duration-1000 group-hover:scale-110" />
+                    <img src={imagem} loading="lazy" alt={imagem} className="h-full w-full object-cover object-center transition duration-1000 group-hover:scale-110" />
                     {desconto > 0 &&
                         <span className="absolute left-0 top-3 rounded-r-lg bg-red-500 px-3 py-1.5 text-sm font-semibold uppercase tracking-wider text-white">-{desconto}%</span>}
                 </a>
