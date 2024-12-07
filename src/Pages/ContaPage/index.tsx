@@ -22,7 +22,7 @@ export const ContaPage = () => {
     const [clients, setClients] = useState<Client[]>([]);
 
     const getClients = async () => {
-        const response = await api.get("/client");
+        const response = await api.get("/client/exibirclients");
         if (Array.isArray(response.data.query)) {
             setClients(response.data.query);
         }

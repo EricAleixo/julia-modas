@@ -19,7 +19,7 @@ export const ModalUpdate: React.FC<ModalProps> = ({ modalStatus, setIsOpen, id})
 
     
     const updateClient = async () => {
-        await api.put(`/client/${id}`, {
+        await api.put(`/client/atualizarclient/${id}`, {
             "nome": clientName.current?.value,
             "email": clientEmail.current?.value,
             "senha": clientPassword.current?.value,

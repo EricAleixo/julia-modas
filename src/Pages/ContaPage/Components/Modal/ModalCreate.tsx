@@ -11,7 +11,7 @@ interface ModalProps {
 export const ModalCreate: React.FC<ModalProps> = ({ modalStatus, setIsOpen }) => {
 
     const createClient = async () => {
-        await api.post("/client", {
+        await api.post("/client/adicionarclients", {
             "nome": clientName.current?.value,
             "email": clientEmail.current?.value,
             "senha": clientPassword.current?.value,
