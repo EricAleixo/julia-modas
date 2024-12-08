@@ -1,9 +1,51 @@
+import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Cabecalho } from "../../../shared/Cabecalho"
 import { Rodape } from "../../../shared/Rodape";
 
+import { api } from "../../../services/api";
+import { extrairToken } from "../../../shared/Funcoes/extrairToken";
+
+interface DadosUsuario{
+  query: Object
+}
 
 export const FormularioLogin: React.FC = () => {
+  
+  const emailInput = useRef<any>(null)
+  const senhaInput = useRef<any>(null)
+
+  const logarUsuario = async () => {
+    
+    const emailValor = emailInput.current.value
+    const senhaValor = senhaInput.current.value
+
+    const response = await api.post("/auth/client", {
+      email: emailValor,
+      senha: senhaValor
+    })
+
+    const token  = response.data.query
+
+    localStorage.setItem("token", token)
+
+  }
+
+  const [dadosUsuario, setDadosUsuarios] = useState<DadosUsuario | null>(null)
+
+  useEffect(()=>{
+
+    const pegarDadosUsuario = async () =>{
+      setDadosUsuarios(await extrairToken())
+    }
+
+    pegarDadosUsuario()
+    
+  }, [])
+
+  if(dadosUsuario){
+    console.log(dadosUsuario.query)
+  }
 
   return (
     <div>
@@ -33,7 +75,7 @@ export const FormularioLogin: React.FC = () => {
               Faça login
             </div>
 
-            <form>
+            <form onClick = {(e) => e.preventDefault()}>
               <div className="mb-4">
                 <label htmlFor="hs-hero-email-2" className="block text-sm font-medium">
                   <span className="sr-only">Email</span>
@@ -43,6 +85,7 @@ export const FormularioLogin: React.FC = () => {
                   id="hs-hero-email-2"
                   className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                   placeholder="Email"
+                  ref={emailInput}
                 />
               </div>
 
@@ -55,13 +98,14 @@ export const FormularioLogin: React.FC = () => {
                   id="hs-hero-password-2"
                   className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                   placeholder="Senha"
+                  ref={senhaInput}
                 />
               </div>
 
               <div className="grid">
                 <button
-                  type="submit"
                   className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-indigo-700 text-white hover:bg-indigo-800 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                  onClick={logarUsuario}
                 >
                   Entre
                 </button>
