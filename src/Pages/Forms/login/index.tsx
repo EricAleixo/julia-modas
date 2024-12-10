@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Cabecalho } from "../../../shared/Cabecalho"
 import { Rodape } from "../../../shared/Rodape";
 
@@ -15,20 +15,35 @@ export const FormularioLogin: React.FC = () => {
   const emailInput = useRef<any>(null)
   const senhaInput = useRef<any>(null)
 
+  const navigate = useNavigate()
+
+  const [erro, setErro] = useState(false);
+
+  const tirarErroMensage = () =>{
+    setErro(false)
+  }
+
   const logarUsuario = async () => {
+
+    try{
+      const emailValor = emailInput.current.value
+      const senhaValor = senhaInput.current.value
+  
+      const response = await api.post("/auth/client", {
+        email: emailValor,
+        senha: senhaValor
+      })
+  
+      const token  = response.data.query
+  
+      localStorage.setItem("token", token)
+  
+      navigate("/")
+    }catch(error: any){
+
+      setErro(error.response.status)
+    }
     
-    const emailValor = emailInput.current.value
-    const senhaValor = senhaInput.current.value
-
-    const response = await api.post("/auth/client", {
-      email: emailValor,
-      senha: senhaValor
-    })
-
-    const token  = response.data.query
-
-    localStorage.setItem("token", token)
-
   }
 
   const [dadosUsuario, setDadosUsuarios] = useState<DadosUsuario | null>(null)
@@ -43,9 +58,7 @@ export const FormularioLogin: React.FC = () => {
     
   }, [])
 
-  if(dadosUsuario){
-    console.log(dadosUsuario.query)
-  }
+  console.log(dadosUsuario)
 
   return (
     <div>
@@ -75,7 +88,12 @@ export const FormularioLogin: React.FC = () => {
               Faça login
             </div>
 
-            <form onClick = {(e) => e.preventDefault()}>
+            <form onClick={(e) => e.preventDefault()}>
+
+              {erro &&
+                <p className="bg-red-200 mb-3 rounded px-3 text-red-600 text-lg">Email ou senha estão incorretos</p>
+              }
+
               <div className="mb-4">
                 <label htmlFor="hs-hero-email-2" className="block text-sm font-medium">
                   <span className="sr-only">Email</span>
@@ -86,6 +104,7 @@ export const FormularioLogin: React.FC = () => {
                   className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                   placeholder="Email"
                   ref={emailInput}
+                  onClick={tirarErroMensage}
                 />
               </div>
 
@@ -99,12 +118,13 @@ export const FormularioLogin: React.FC = () => {
                   className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                   placeholder="Senha"
                   ref={senhaInput}
+                  onClick={tirarErroMensage}
                 />
               </div>
 
               <div className="grid">
                 <button
-                  className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-indigo-700 text-white hover:bg-indigo-800 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                  className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-indigo-700 text-white hover:bg-indigo-900 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
                   onClick={logarUsuario}
                 >
                   Entre
